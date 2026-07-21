@@ -1,0 +1,18 @@
+services:
+  kavita:
+    image: jvmilazz0/kavita:latest
+    container_name: kavita
+    restart: unless-stopped
+    mem_limit: 512m
+    environment:
+      TZ: Asia/Shanghai
+    ports:
+      - "127.0.0.1:5000:5000"
+    volumes:
+      - ./config:/kavita/config
+      - ./books:/books:ro
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
