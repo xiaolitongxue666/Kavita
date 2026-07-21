@@ -3,3 +3,5 @@ books/**
 !books/.gitkeep
 *.env
 admin-credentials.txt
+*.bak
+*.epub.calibre-bad.bak
