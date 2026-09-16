@@ -1,6 +1,6 @@
 # Kavita — VPS 部署
 
-独立 Docker 栈：仅监听 `127.0.0.1:5000`，由 [vps_nginx](https://github.com/xiaolitongxue666/vps_nginx) 反代 **`/kavita/`**。
+独立 Docker 栈：仅监听 `127.0.0.1:5000`，由 [vps_nginx](https://github.com/xiaolitongxue666/vps_nginx) 反代 **`/kavita/`**。镜像钉 `jvmilazz0/kavita:0.9.1`。
 
 公网：将 `kavita` 加入 `VPS_NGINX_PUBLIC_EXPOSE`，访问  
 `https://xiaolitongxue.com.cn/kavita/`（与 `/blog/`、`/freshrss/`、`/paperless/` 同模式）。
@@ -9,7 +9,7 @@
 
 | 环境 | 路径 |
 |------|------|
-| 本地 fork | `e:/Code/my_code/Vps/kavita`（工作区） |
+| 本地 fork | `Code/VPS/Kavita`（工作区） |
 | VPS | `/home/ubuntu/Code/VPS/kavita` |
 | Compose | `deploy/vps/` |
 | 凭证备忘（勿提交） | `deploy/vps/admin-credentials.txt` |
