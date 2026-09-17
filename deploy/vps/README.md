@@ -9,11 +9,7 @@
 
 | 环境 | 路径 |
 |------|------|
-<<<<<<< HEAD
-| 本地 fork | `Code/VPS/Kavita`（工作区） |
-=======
 | 本地 fork | `Code/VPS/Kavita`（工作区；目录名大小写与 GitHub 锁定） |
->>>>>>> 64155ca (docs: pin Kavita 0.9.1 and workspace path)
 | VPS | `/home/ubuntu/Code/VPS/kavita` |
 | Compose | `deploy/vps/` |
 | 凭证备忘（勿提交） | `deploy/vps/admin-credentials.txt` |
