@@ -553,3 +553,4 @@ API/config/bookmarks/
 # Local tooling caches / transient dirs
 .codegraph/
 undefined/
+.local/
