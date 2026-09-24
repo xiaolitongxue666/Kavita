@@ -18,8 +18,12 @@
 
 ```bash
 cd /home/ubuntu/Code/VPS/Kavita/deploy/vps
-docker compose pull && docker compose up -d
+COMPOSE_IGNORE_ORPHANS=true docker compose up -d --no-build
+# 镜像 digest 变了才 docker compose pull
+# 回滚：上一 jvmilazz0/kavita:0.9.1 digest；不要 bootstrap、不要 volume rm
 ```
+
+**single**：`docker compose config` + `curl --noproxy '*' http://127.0.0.1:5000/`。**related**：`/kavita/`（要 vps_nginx）。
 
 vps_nginx：`PUBLIC_EXPOSE` 含 `kavita` 后 `sudo -E ./scripts/deploy.sh`。
 
