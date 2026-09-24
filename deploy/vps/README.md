@@ -10,14 +10,14 @@
 | 环境 | 路径 |
 |------|------|
 | 本地 fork | `Code/VPS/Kavita`（工作区；目录名大小写与 GitHub 锁定） |
-| VPS | `/home/ubuntu/Code/VPS/kavita` |
+| VPS | `/home/ubuntu/Code/VPS/Kavita` |
 | Compose | `deploy/vps/` |
 | 凭证备忘（勿提交） | `deploy/vps/admin-credentials.txt` |
 
 ## 启动
 
 ```bash
-cd /home/ubuntu/Code/VPS/kavita/deploy/vps
+cd /home/ubuntu/Code/VPS/Kavita/deploy/vps
 docker compose pull && docker compose up -d
 ```
 
@@ -39,7 +39,7 @@ Kavita API 需 API key（`Kavita-APIKey` header 或 `?apiKey=` query）。admin 
 
 ```bash
 # 容器以 root 运行 → kavita.db 属主 root，宿主写库需 sudo；WAL 模式，无需停容器
-cd /home/ubuntu/Code/VPS/kavita/deploy/vps/config
+cd /home/ubuntu/Code/VPS/Kavita/deploy/vps/config
 KEY=$(openssl rand -hex 16 | head -c 32)
 sudo sqlite3 kavita.db "INSERT INTO AppUserAuthKey (Key, Name, CreatedAtUtc, Provider, AppUserId) VALUES ('$KEY', 'scan-tmp', '2026-08-18 01:50:00', 1, 1);"
 # 触发全量扫描
