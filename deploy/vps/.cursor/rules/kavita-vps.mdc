@@ -1,0 +1,10 @@
+---
+description: Kavita 目录名大小写锁定
+alwaysApply: true
+---
+
+生产路径 `/home/ubuntu/Code/VPS/Kavita`（不是 `kavita`）。部署：`cd deploy/vps && COMPOSE_IGNORE_ORPHANS=true docker compose up -d --no-build`。
+
+Base URL=`/kavita/`，Nginx 不剥前缀。勿把 Paperless `originals/` 当书库。勿提交 `admin-credentials.txt`、`books/`。
+
+细节：[README.md](../../README.md)
