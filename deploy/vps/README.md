@@ -36,6 +36,8 @@ vps_nginx：`PUBLIC_EXPOSE` 含 `kavita` 后 `sudo -E ./scripts/deploy.sh`。
 - **精读 / 沉浸式翻译：优先 EPUB**（HTML DOM）。PDF 用 pdf.js，目录或可译、**正文通常不可译**。
 - 勿把 Paperless `originals/` 哈希目录当 library 根。
 - 换 EPUB 后：替换文件 → `POST /api/Library/scan?libraryId=<id>`（或 UI 扫描）→ 浏览器强刷。
+- **zlib 下载**：本机 `winget install --id heartleo.zlib --exact`（二进制在 `%LOCALAPPDATA%\Microsoft\WinGet\Packages\heartleo.zlib_*`）。用户级 `~/.config/zlib/.env` 设 `ZLIB_DOWNLOAD_DIR=<本机 books 绝对路径>`、`ZLIB_SEARCH_EXTENSIONS=epub,pdf`、`ZLIB_PROXY=http://127.0.0.1:7890`（本机直连 `z-lib.gd` 超时，必须走本机代理）。登录只在本机终端 `zlib doctor` → `zlib login --domain <可用域名>`，密码与 `session.json` 不进仓库、不进对话。
+- **agent 入口**：Cursor `~/.cursor/mcp.json` 的 `zlib-kavita` 用 `zlib mcp --allowed-dir <本机 books> --disable-kindle --disable-weread --disable-history-delete`，下载只能落在 `books/` 内。按系列建子目录：`books/<Series>/<书名>.epub`。改 `.env` 或代理后要重载 MCP 才生效（服务只在启动时读环境）。书不入 git（`books/**` 已忽略），本地也不自动同步到 VPS。
 
 ### 扫描 / 验证（无 UI 凭证时）
 

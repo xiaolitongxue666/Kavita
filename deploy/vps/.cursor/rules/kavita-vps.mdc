@@ -7,4 +7,6 @@ alwaysApply: true
 
 Base URL=`/kavita/`，Nginx 不剥前缀。勿把 Paperless `originals/` 当书库。勿提交 `admin-credentials.txt`、`books/`。
 
+本机装书只走 `zlib-kavita`（Cursor MCP，`zlib mcp --allowed-dir <本机 deploy/vps/books>`）：默认下到 `books/<Series>/`，优先 EPUB；不 `git add` 书、不改 `books/**` 忽略规则、不动别的目录。登录与 `session.json` 只在本机终端，agent 不代填密码。
+
 细节：[README.md](../../README.md)
